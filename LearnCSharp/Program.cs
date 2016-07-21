@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LearnCSharp
+namespace LearnCSharp //Comment
 {
     class HelloWorld
     {
@@ -123,6 +123,72 @@ namespace LearnCSharp
         }
     }
 
+    class learnprogramdecision
+    {
+        public void greet(string name)
+        {
+            if (string.IsNullOrEmpty(name)) return;
+            Console.WriteLine($"Hello, {name}!");
+            Console.ReadLine();
+        }
+
+        internal void greet()
+        {
+            throw new NotImplementedException();
+        }
+    }
+
+    class testifelse
+    {
+        public void runtestifelse()
+        {
+            bool someCondition = true;
+
+            var sum = 10;
+            if (someCondition)
+                //sum = sum + 5;
+                sum = sum * 2;
+            Console.WriteLine(sum);
+            Console.ReadLine();
+
+            Console.WriteLine("What Is The Capital of Malaysia?");
+            var answer = Console.ReadLine();
+            if (answer.ToLower() == "kuala lumpur")
+            {
+                Console.WriteLine("Correct!");
+                Console.ReadLine();
+            }
+            else
+            {
+                Console.WriteLine("Sorry, You Have Got The Wrong Answer.");
+                Console.ReadLine();
+            }
+        }
+           
+    }
+
+    class decisionifelse
+    {
+        public void rundecisionifelse()
+        {
+            int x,y;
+            x = 25;
+            y = 10;
+
+            if (x < y)
+            {
+                Console.WriteLine("X is Smaller Then Y");
+                Console.ReadLine();
+            }
+            else if (x > y)
+            {
+                Console.WriteLine("X is Bigger The Y");
+                Console.ReadLine();
+            }
+        }
+    }
+
+   
     class Program
     {
         static void Main(string[] args)
@@ -133,8 +199,18 @@ namespace LearnCSharp
             //CreateStringTest CS = new CreateStringTest();
             //CS.RunStringTest();
 
-            datetimetest DT = new datetimetest();
-            DT.rundatetimetest();
+            //datetimetest DT = new datetimetest();
+            //DT.rundatetimetest();
+
+            //learnprogramdecision PD = new learnprogramdecision();
+            //PD.greet();
+
+            //testifelse TIF = new testifelse();
+            //TIF.runtestifelse();
+
+            decisionifelse DIF = new decisionifelse();
+            DIF.rundecisionifelse();
+            
         }
     }
 }
